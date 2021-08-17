@@ -17,11 +17,11 @@ static const int topbar                 = 1;        /* 0 means bottom bar */
 static const int focusonwheel           = 0;
 static const char *fonts[]              = { "Terminus (TTF):size=12","JoyPixels:pixelsize=10:antialias=true:autohint=true" };
 static const char dmenufont[]           = "Terminus (TTF):size=12";
-static const char normfgcolor[]         = "#bdae93";
-static const char selfgcolor[]          = "#fbf1c7";
-static const char normbgcolor[]         = "#00688b";
+static const char normfgcolor[]         = "#42a7f5";
+static const char selfgcolor[]          = "#42a7f5";
+static const char normbgcolor[]         = "#000000";
 static const char selbgcolor[]          = "#000000";
-static const char normbordercolor[]     = "#282828";
+static const char normbordercolor[]     = "#000000";
 static const char selbordercolor[]      = "#000000";
 static const unsigned int baralpha      = 0xcd;
 static const unsigned int borderalpha   = 0xcd;
@@ -146,7 +146,6 @@ static Key keys[] = {
     { 0,               XK_Print,                       spawn,              SHCMD("scrot -e 'xclip -selection clipboard -t image/png -i $f'")},
     { MODKEY,               XK_b,                       spawn,              SHCMD("brave")},
     { Mod1Mask,               XK_3,                       spawn,              SHCMD("libreoffice")},
-    { Mod1Mask,               XK_F6,                       spawn,              SHCMD("st -e mocp")},
     { Mod1Mask,               XK_F5,                       spawn,              SHCMD("st -e bluetoothctl")},
     { Mod1Mask,               XK_4,                       spawn,              SHCMD("spotify")},
     { Mod1Mask,               XK_5,                       spawn,              SHCMD("signal-desktop")},
@@ -154,6 +153,7 @@ static Key keys[] = {
     { Mod1Mask,               XK_2,                       spawn,              SHCMD("libreoffice")},
     { Mod1Mask,               XK_1,                       spawn,              SHCMD("dmenufm")},
     { MODKEY,               XK_F2,                       spawn,              SHCMD(TERMINAL " -e nmtui")},
+    { MODKEY,               XK_F6,                       spawn,              SHCMD(TERMINAL " -e mocp")},
     { ControlMask|Mod1Mask,  XK_Delete,                 spawn,              SHCMD("xkill")},
     { MODKEY,		    XK_Escape,                       spawn,              SHCMD(TERMINAL " -e htop")},
     { MODKEY|ShiftMask,     XK_f,                       spawn,              SHCMD("spacefm")},
