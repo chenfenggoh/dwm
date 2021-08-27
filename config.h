@@ -119,7 +119,6 @@ static Key keys[] = {
     /* modifier             key                         function            argument */
     { MODKEY,               XK_d,                       spawn,              {.v = dmenucmd } },
     { ControlMask|Mod1Mask, XK_t,                  	spawn,              {.v = termcmd } },
-    { MODKEY, 		    XK_Return,                  spawn,              {.v = termcmd } },
     { MODKEY|ShiftMask,     XK_Return,                  togglescratch,      {.ui = 0} },
     { MODKEY,               XK_Tab,                     cyclelayout,        {.i = +1 } },
     { MODKEY,               XK_space,                   togglefloating,     {0} },
@@ -153,7 +152,7 @@ static Key keys[] = {
     { Mod1Mask,               XK_2,                       spawn,              SHCMD("libreoffice")},
     { Mod1Mask,               XK_1,                       spawn,              SHCMD("dmenufm")},
     { MODKEY,               XK_F2,                       spawn,              SHCMD(TERMINAL " -e nmtui")},
-    { MODKEY,               XK_F6,                       spawn,              SHCMD(TERMINAL " -e mocp")},
+    { Mod1Mask,               XK_F6,                       spawn,              SHCMD(TERMINAL " -e mocp")},
     { ControlMask|Mod1Mask,  XK_Delete,                 spawn,              SHCMD("xkill")},
     { MODKEY,		    XK_Escape,                       spawn,              SHCMD(TERMINAL " -e htop")},
     { MODKEY|ShiftMask,     XK_f,                       spawn,              SHCMD("spacefm")},
